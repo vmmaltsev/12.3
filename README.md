@@ -9,9 +9,11 @@
 
 Ответ:
 
-select * from sakila.address where district like 'K%a' and district not like '% %';
+select DISTINCT district from sakila.address where district like 'K%a' and district not like '% %';
 
-![alt text](https://github.com/vmmaltsev/screenshot2/blob/main/Screenshot_20.png)
+![alt text](https://github.com/vmmaltsev/screenshot2/blob/main/Screenshot_24.png)
+
+
 
 ---
 
@@ -36,9 +38,12 @@ HAVING amount >'10';
 
 Ответ:
 
-SELECT * FROM (SELECT * FROM sakila.rental ORDER BY rental_id DESC LIMIT 5) t ORDER BY rental_id;
+SELECT * FROM sakila.rental ORDER BY rental_id DESC LIMIT 5;
+SELECT * FROM sakila.rental ORDER BY rental_date DESC LIMIT 5;
 
 ![alt text](https://github.com/vmmaltsev/screenshot2/blob/main/Screenshot_22.png)
+![alt text](https://github.com/vmmaltsev/screenshot2/blob/main/Screenshot_25.png)
+
 
 ---
 
